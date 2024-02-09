@@ -1,0 +1,52 @@
+.section-about {
+  @include container(calc(#{$space-very-large} + 20vh), calc(#{$space-very-large} + 20vh));
+  margin-top: -20vh;
+  background-color: $color-grey-light;
+}
+
+.section-features {
+  @include container(calc(#{$space-very-large} + 20vh), calc(#{$space-very-large} + 20vh));
+  margin-top: -20vh;
+  background-image: linear-gradient(to right bottom,
+  rgba($color-primary, 0.8),
+  rgba($color-primary-dark, 0.8)),
+  url("../../img/nat-4.jpg");
+  background-size: cover;
+  background-position: center;
+  
+  clip-path: polygon(0 20vh, 100% 0, 100% calc(100% - 20vh), 0 100%);
+}
+
+.section-tours {
+  @include container(calc(#{$space-very-large} + 20vh), $space-very-large);
+  margin-top: -20vh;
+}
+
+.section-stories {
+  @include container($space-very-large, $space-very-large);
+  position: relative;
+}
+
+.section-book {
+  @include container($space-very-large, $space-very-large);
+  background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+
+.book {
+  width: 85%;
+  height: 40rem;
+  margin: 0 auto;
+  background-image: 
+    linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%),
+    url(/img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba($color-black, .3);
+
+  &__form {
+    width: 50%;
+    height: 100%;
+    padding: $space-medium-small;
+  }
+}
+

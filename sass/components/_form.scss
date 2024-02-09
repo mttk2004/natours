@@ -1,0 +1,110 @@
+.form {
+  padding: $space-medium-small;
+
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: $space-very-small;
+    }
+
+    &:last-child {
+      margin-top: $space-medium;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 90%;
+    background-color: rgba($color-white, .5);
+    padding: $space-extremely-small $space-small;
+    font-size: $space-small;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    border-bottom: 3px solid transparent;
+    color: inherit;
+    transition: all .2s ease-in-out;
+    
+    &:focus {
+      box-shadow: 0 10px 20px rgba($color-black, .2);
+
+      &:invalid {
+        border-bottom-color: orangered;
+      }
+  
+      &:valid {
+        border-bottom-color: $color-primary;
+      }
+    }
+
+    &::placeholder {
+      color: rgba($color-grey-dark, .5);
+      letter-spacing: 2px;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin: 0;
+    margin-left: $space-small;
+    font-size: $size-very-small;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+  }
+
+  &__input:placeholder-shown ~ &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-$space-medium);
+  }
+
+  &__radio-group {
+    display: inline-block;
+    width: -moz-fit-content;
+    width: fit-content;
+
+    &:not(:last-child) {
+      margin-right: $space-medium-small;
+    }
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-input:checked ~ &__radio-label > &__radio-button::after {
+    opacity: 1;
+  }
+
+
+  &__radio-label {
+    cursor: pointer;
+    position: relative;
+    padding-left: $space-medium-small;
+  }
+
+  &__radio-button {
+    height: $size-medium-small;
+    width: $size-medium-small;
+    border: 3px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+    }
+  }
+
+}

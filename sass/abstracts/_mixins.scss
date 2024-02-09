@@ -1,0 +1,7 @@
+@mixin container($padding-top, $padding-bottom) {
+  padding: $padding-top 5% $padding-bottom;
+}
+
+@mixin set-margin-horizontal($space) {
+  margin: $space 0;
+}
