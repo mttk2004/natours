@@ -1,48 +1,50 @@
+@use "../abstracts";
+
 .u-center-text {
   text-align: center;
 }
 
 .u-margin-bottom-extremely-small {
-  margin-bottom: $space-extremely-small;
+  margin-bottom: abstracts.$space-extremely-small;
 }
 .u-margin-bottom-very-small {
-  margin-bottom: $space-very-small;
+  margin-bottom: abstracts.$space-very-small;
 }
 .u-margin-bottom-small {
-  margin-bottom: $space-small;
+  margin-bottom: abstracts.$space-small;
 }
 .u-margin-bottom-medium-small {
-  margin-bottom: $space-medium-small;
+  margin-bottom: abstracts.$space-medium-small;
 }
 .u-margin-bottom-medium {
-  margin-bottom: $space-medium;
+  margin-bottom: abstracts.$space-medium;
 }
 .u-margin-bottom-large {
-  margin-bottom: $space-large;
+  margin-bottom: abstracts.$space-large;
 }
 .u-margin-bottom-very-large {
-  margin-bottom: $space-very-large;
+  margin-bottom: abstracts.$space-very-large;
 }
 
 .u-margin-top-extremely-small {
-  margin-top: $space-extremely-small;
+  margin-top: abstracts.$space-extremely-small;
 }
 .u-margin-top-very-small {
-  margin-top: $space-very-small;
+  margin-top: abstracts.$space-very-small;
 }
 .u-margin-top-small {
-  margin-top: $space-small;
+  margin-top: abstracts.$space-small;
 }
 .u-margin-top-medium-small {
-  margin-top: $space-medium-small;
+  margin-top: abstracts.$space-medium-small;
 }
 .u-margin-top-medium {
-  margin-top: $space-medium;
+  margin-top: abstracts.$space-medium;
 }
 .u-margin-top-large {
-  margin-top: $space-large;
+  margin-top: abstracts.$space-large;
 }
 .u-margin-top-very-large {
-  margin-top: $space-very-large;
+  margin-top: abstracts.$space-very-large;
 }
 

@@ -1,9 +1,11 @@
+@use "../abstracts";
+
 .btn {
   &,
   &:link,
   &:visited {
     text-transform: uppercase;
-    padding: $space-very-small $space-medium;
+    padding: abstracts.$space-very-small abstracts.$space-medium;
     display: inline-block;
     text-decoration: none;
     border-radius: 10rem;
@@ -12,7 +14,7 @@
 
   &:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 5px 10px 20px rgba($color-black, 0.15);
+    box-shadow: 5px 10px 20px rgba(abstracts.$color-black, 0.15);
 
     &::after {
       transform: scaleX(1.5) scaleY(2);
@@ -24,31 +26,31 @@
   &:focus {
     outline: none;
     transform: translateY(-0.1rem);
-    box-shadow: 5px 5px 10px rgba($color-black, 0.08);
+    box-shadow: 5px 5px 10px rgba(abstracts.$color-black, 0.08);
   }
 
   &--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
+    background-color: abstracts.$color-white;
+    color: abstracts.$color-grey-dark;
 
     &::after {
-      background-color: $color-white;
+      background-color: abstracts.$color-white;
     }
   }
   &--green {
-    background-color: $color-primary;
-    color: $color-white;
+    background-color: abstracts.$color-primary;
+    color: abstracts.$color-white;
 
     &::after {
-      background-color: $color-primary;
+      background-color: abstracts.$color-primary;
     }
   }
   // &--green {
-  //   background-color: $color-primary;
-  //   color: $color-white;
+  //   background-color: abstracts.$color-primary;
+  //   color: abstracts.$color-white;
 
   //   &::after {
-  //     background-color: $color-white;
+  //     background-color: abstracts.$color-white;
   //   }
   // }
 
@@ -73,30 +75,30 @@
 }
 
 .btn-text {
-  &:link, 
+  &:link,
   &:visited {
     display: inline-block;
-    color: $color-primary;
+    color: abstracts.$color-primary;
     transition: all .3s ease-in-out;
-    font-size: $size-medium-small;
+    font-size: abstracts.$size-medium-small;
     text-decoration: none;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 1px solid abstracts.$color-primary;
     padding: 3px 6px;
   }
 
   &:hover {
-    color: $color-white;
-    background-color: $color-primary;
+    color: abstracts.$color-white;
+    background-color: abstracts.$color-primary;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba($color-black, 0.15);
+    box-shadow: 0 10px 20px rgba(abstracts.$color-black, 0.15);
   }
 
   &:active {
-    color: $color-white;
-    background-color: $color-primary;
+    color: abstracts.$color-white;
+    background-color: abstracts.$color-primary;
     transform: translateY(-1.5px);
-    box-shadow: 0 5px 10px rgba($color-black, 0.1);
-  
+    box-shadow: 0 5px 10px rgba(abstracts.$color-black, 0.1);
+
   }
 }
 

@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .card {
   // functionalities
   -moz-perspective: 150rem;
@@ -17,27 +19,27 @@
     backface-visibility: hidden;
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba($color-black, .15);
+    box-shadow: 0 10px 20px rgba(abstracts.$color-black, .15);
 
 
     &--back {
       transform: rotateY(180deg);
 
       &-1 {
-        background-image: linear-gradient(to right bottom, 
-          $color-secondary-light, $color-secondary-dark);
+        background-image: linear-gradient(to right bottom,
+          abstracts.$color-secondary-light, abstracts.$color-secondary-dark);
       }
 
       &-2 {
-        background-image: linear-gradient(to right bottom, 
-          $color-primary-light, $color-primary-dark);
+        background-image: linear-gradient(to right bottom,
+          abstracts.$color-primary-light, abstracts.$color-primary-dark);
       }
 
       &-3 {
-        background-image: linear-gradient(to right bottom, 
-          $color-tertiary-light, $color-tertiary-dark);
+        background-image: linear-gradient(to right bottom,
+          abstracts.$color-tertiary-light, abstracts.$color-tertiary-dark);
       }
-    } 
+    }
   }
 
   &:hover &__side--front {
@@ -58,22 +60,22 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     &--1 {
-      background-image: linear-gradient(to right bottom, 
-      $color-secondary-light, $color-secondary-dark), url(../../img/nat-5.jpg);
+      background-image: linear-gradient(to right bottom,
+      abstracts.$color-secondary-light, abstracts.$color-secondary-dark), url(../../img/nat-5.jpg);
     }
     &--2 {
-      background-image: linear-gradient(to right bottom, 
-      $color-primary-light, $color-primary-dark), url(../../img/nat-6.jpg);
+      background-image: linear-gradient(to right bottom,
+      abstracts.$color-primary-light, abstracts.$color-primary-dark), url(../../img/nat-6.jpg);
     }
     &--3 {
-      background-image: linear-gradient(to right bottom, 
-      $color-tertiary-light, $color-tertiary-dark), url(../../img/nat-7.jpg);
+      background-image: linear-gradient(to right bottom,
+      abstracts.$color-tertiary-light, abstracts.$color-tertiary-dark), url(../../img/nat-7.jpg);
     }
   }
 
   &__heading {
-    color: $color-white;
-    font-size: $size-medium-large;
+    color: abstracts.$color-white;
+    font-size: abstracts.$size-medium-large;
     text-transform: uppercase;
     width: 60%;
     position: absolute;
@@ -81,46 +83,46 @@
     right: 2rem;
     text-align: right;
   }
-  
+
   &__heading-span {
-    padding: $space-extremely-small $space-very-small;
+    padding: abstracts.$space-extremely-small abstracts.$space-very-small;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
     &--1 {
-      background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
+      background-image: linear-gradient(to right, abstracts.$color-secondary-light, abstracts.$color-secondary-dark);
     }
     &--2 {
-      background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+      background-image: linear-gradient(to right, abstracts.$color-primary-light, abstracts.$color-primary-dark);
     }
     &--3 {
-      background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
+      background-image: linear-gradient(to right, abstracts.$color-tertiary-light, abstracts.$color-tertiary-dark);
     }
   }
 
   &__details {
-    padding: $space-medium $space-large;
+    padding: abstracts.$space-medium abstracts.$space-large;
 
     ul {
       display: flex;
       flex-direction: column;
-      gap: $space-small;
+      gap: abstracts.$space-small;
       text-align: center;
-      
+
       li:not(:last-child) {
-        border-bottom: 1px solid rgba($color-grey-dark, .1);
+        border-bottom: 1px solid rgba(abstracts.$color-grey-dark, .1);
       }
     }
   }
 
 
-  // back side styling 
+  // back side styling
   &__cta {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $color-white;
+    color: abstracts.$color-white;
   }
 
   &__price-box {
@@ -129,13 +131,13 @@
 
   &__price-only {
     text-transform: uppercase;
-    font-size: $space-small;
+    font-size: abstracts.$space-small;
     font-weight: 700;
   }
 
   &__price-value {
-    font-size: $size-very-large;
+    font-size: abstracts.$size-very-large;
     font-weight: 500;
-    margin: 0 0 $space-medium-large;
+    margin: 0 0 abstracts.$space-medium-large;
   }
 }

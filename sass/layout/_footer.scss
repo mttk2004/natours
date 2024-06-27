@@ -1,12 +1,14 @@
+@use "../abstracts";
+
 .footer {
-  @include container($space-very-large, $space-medium-large);
-  background-color: $color-grey-very-dark;
-  color: $color-grey-light;
-  font-size: $size-small;
+  @include abstracts.container(abstracts.$space-very-large, abstracts.$space-medium-large);
+  background-color: abstracts.$color-grey-very-dark;
+  color: abstracts.$color-grey-light;
+  font-size: abstracts.$size-small;
 
   &__logo-box {
     text-align: center;
-    margin-bottom: $space-large;
+    margin-bottom: abstracts.$space-large;
   }
 
   &__logo {
@@ -14,43 +16,43 @@
   }
 
   &__navigation {
-    width: -moz-fit-content;
+    //width: -moz-fit-content;
     width: fit-content;
     display: inline-block;
-    border-top: 1px solid $color-primary-light;
-    padding-top: $space-small;
+    border-top: 1px solid abstracts.$color-primary-light;
+    padding-top: abstracts.$space-small;
   }
-  
+
   &__list {
     display: inline-flex;
-    gap: $space-small;
+    gap: abstracts.$space-small;
   }
 
   &__link {
-    &:link, 
+    &:link,
     &:visited {
       display: inline-block;
       font: inherit;
-      color: $color-primary-light;
+      color: abstracts.$color-primary-light;
       text-decoration: none;
       transition: all .2s ease-in-out;
     }
-    
+
     &:hover,
     &:active {
-      color: lighten($color-primary-light, 20%);
+      color: lighten(abstracts.$color-primary-light, 20%);
       transform: rotate(8deg) scale(1.25);
-      box-shadow: 0 10px 20px rgba($color-black, .5);
-      background-color: lighten($color-grey-very-dark, 2%);
+      box-shadow: 0 10px 20px rgba(abstracts.$color-black, .5);
+      background-color: lighten(abstracts.$color-grey-very-dark, 2%);
     }
   }
 
   &__copyright {
-    width: -moz-fit-content;
+    //width: -moz-fit-content;
     width: fit-content;
     display: inline-block;
-    border-top: 1px solid $color-grey-light;
-    padding-top: $space-small;
+    border-top: 1px solid abstracts.$color-grey-light;
+    padding-top: abstracts.$space-small;
     justify-self: center;
   }
 }

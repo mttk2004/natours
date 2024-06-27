@@ -1,30 +1,32 @@
+@use "../abstracts";
+
 .navigation {
   &__checkbox {
     display: none;
   }
 
   &__button {
-    height: $size-extremely-large;
-    width: $size-extremely-large;
+    height: abstracts.$size-extremely-large;
+    width: abstracts.$size-extremely-large;
     text-align: center;
     border-radius: 50%;
-    background-color: $color-white;
+    background-color: abstracts.$color-white;
     position: fixed;
-    top: calc(#{$space-medium-small} - .8rem);
-    right: calc(#{$space-medium} - .8rem);
+    top: calc(#{abstracts.$space-medium-small} - .8rem);
+    right: calc(#{abstracts.$space-medium} - .8rem);
     cursor: pointer;
     z-index: 102;
-    box-shadow: 0 10px 20px rgba($color-black, .25);
+    box-shadow: 0 10px 20px rgba(abstracts.$color-black, .25);
   }
 
-  &__background {  
-    height: $size-very-large;
-    width: $size-very-large;
+  &__background {
+    height: abstracts.$size-very-large;
+    width: abstracts.$size-very-large;
     border-radius: 50%;
-    background-image: radial-gradient($color-primary-light, $color-primary-dark);
+    background-image: radial-gradient(abstracts.$color-primary-light, abstracts.$color-primary-dark);
     position: fixed;
-    top: $space-medium-small;
-    right: $space-medium;
+    top: abstracts.$space-medium-small;
+    right: abstracts.$space-medium;
     z-index: 100;
     transition: all .25s cubic-bezier(.4,.17,.19,.47);
   }
@@ -49,28 +51,28 @@
   }
 
   &__link {
-    &:link, 
+    &:link,
     &:visited {
       box-sizing: border-box;
       text-decoration: none;
       text-transform: uppercase;
-      font-size: $size-medium-large;
+      font-size: abstracts.$size-medium-large;
       font-weight: 400;
-      color: $color-white;
-      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      color: abstracts.$color-white;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, abstracts.$color-white 50%);
       background-size: 220%;
       transition: all .4s;
       display: inline-block;
-      padding: $space-extremely-small $space-medium-small;
-      margin: $space-extremely-small 0;
+      padding: abstracts.$space-extremely-small abstracts.$space-medium-small;
+      margin: abstracts.$space-extremely-small 0;
     }
 
-    &:active, 
+    &:active,
     &:hover {
       border-radius: 4px;
       background-position: 100%;
-      color: $color-primary;
-      transform: translateX($space-small);
+      color: abstracts.$color-primary;
+      transform: translateX(abstracts.$space-small);
     }
   }
 
@@ -93,7 +95,7 @@
 
   &__checkbox:checked ~ &__button &__icon {
     background-color: transparent;
-    
+
     &::before {
       transform: rotate(-135deg);
       top: 0;
@@ -114,9 +116,9 @@
     &,
     &::before,
     &::after {
-      width: $size-large;
+      width: abstracts.$size-large;
       height: 2px;
-      background-color: $color-grey-very-dark;
+      background-color: abstracts.$color-grey-very-dark;
       display: inline-block;
     }
 

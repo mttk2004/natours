@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .grid {
   display: grid;
 }
@@ -13,11 +15,11 @@
 }
 
 .grid__gap-small {
-  gap: $space-small;
+  gap: abstracts.$space-small;
 }
 .grid__gap-medium {
-  gap: $space-medium;
+  gap: abstracts.$space-medium;
 }
 .grid__gap-large {
-  gap: $space-large;
+  gap: abstracts.$space-large;
 }

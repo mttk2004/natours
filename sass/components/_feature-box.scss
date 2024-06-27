@@ -1,18 +1,20 @@
+@use "../abstracts";
+
 .feature-box {
   text-align: center;
-  background-color: rgba($color-white, .8);
+  background-color: rgba(abstracts.$color-white, .8);
   border-radius: 4px;
-  padding: $space-medium;
-  box-shadow: 0 10px 20px rgba($color-black, .2);
+  padding: abstracts.$space-medium;
+  box-shadow: 0 10px 20px rgba(abstracts.$color-black, .2);
   transition: all .2s ease-in-out;
 
   &__icon {
     color: transparent;
     display: inline-block;
-    font-size: $size-extremely-large;
-    margin-bottom: $space-medium-small;
+    font-size: abstracts.$size-extremely-large;
+    margin-bottom: abstracts.$space-medium-small;
 
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-image: linear-gradient(to right, abstracts.$color-primary-light, abstracts.$color-primary-dark);
     background-clip: text;
     -webkit-background-clip: text;
   }

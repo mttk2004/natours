@@ -1,52 +1,53 @@
+@use "../abstracts";
+
 .form {
-  padding: $space-medium-small;
+  padding: abstracts.$space-medium-small;
 
   &__group {
     &:not(:last-child) {
-      margin-bottom: $space-very-small;
+      margin-bottom: abstracts.$space-very-small;
     }
 
     &:last-child {
-      margin-top: $space-medium;
+      margin-top: abstracts.$space-medium;
     }
   }
 
   &__input {
     display: block;
     width: 90%;
-    background-color: rgba($color-white, .5);
-    padding: $space-extremely-small $space-small;
-    font-size: $space-small;
+    background-color: rgba(abstracts.$color-white, .5);
+    padding: abstracts.$space-extremely-small abstracts.$space-small;
+    font-size: abstracts.$space-small;
     border: none;
     outline: none;
     border-radius: 2px;
     border-bottom: 3px solid transparent;
     color: inherit;
     transition: all .2s ease-in-out;
-    
+
     &:focus {
-      box-shadow: 0 10px 20px rgba($color-black, .2);
+      box-shadow: 0 10px 20px rgba(abstracts.$color-black, .2);
 
       &:invalid {
         border-bottom-color: orangered;
       }
-  
+
       &:valid {
-        border-bottom-color: $color-primary;
+        border-bottom-color: abstracts.$color-primary;
       }
     }
 
     &::placeholder {
-      color: rgba($color-grey-dark, .5);
+      color: rgba(abstracts.$color-grey-dark, .5);
       letter-spacing: 2px;
     }
   }
 
   &__label {
     display: block;
-    margin: 0;
-    margin-left: $space-small;
-    font-size: $size-very-small;
+    margin : 0 0 0 abstracts.$space-small;
+    font-size: abstracts.$size-very-small;
     font-weight: 700;
     transition: all .3s ease-in-out;
   }
@@ -54,16 +55,16 @@
   &__input:placeholder-shown ~ &__label {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-$space-medium);
+    transform: translateY(-(abstracts.$space-medium));
   }
 
   &__radio-group {
     display: inline-block;
-    width: -moz-fit-content;
+    //width: -moz-fit-content;
     width: fit-content;
 
     &:not(:last-child) {
-      margin-right: $space-medium-small;
+      margin-right: abstracts.$space-medium-small;
     }
   }
 
@@ -79,13 +80,13 @@
   &__radio-label {
     cursor: pointer;
     position: relative;
-    padding-left: $space-medium-small;
+    padding-left: abstracts.$space-medium-small;
   }
 
   &__radio-button {
-    height: $size-medium-small;
-    width: $size-medium-small;
-    border: 3px solid $color-primary;
+    height: abstracts.$size-medium-small;
+    width: abstracts.$size-medium-small;
+    border: 3px solid abstracts.$color-primary;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
@@ -102,7 +103,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: $color-primary;
+      background-color: abstracts.$color-primary;
       opacity: 0;
     }
   }
